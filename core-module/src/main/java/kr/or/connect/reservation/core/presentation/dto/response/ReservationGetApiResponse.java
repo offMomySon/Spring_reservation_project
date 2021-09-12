@@ -1,6 +1,7 @@
 package kr.or.connect.reservation.core.presentation.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModelProperty;
 import kr.or.connect.reservation.core.presentation.dto.ReservationResponseResult;
 import lombok.AccessLevel;
 import lombok.Data;
@@ -15,6 +16,7 @@ import java.util.List;
 public class ReservationGetApiResponse {
     @JsonProperty("reservations")
     private List<ReservationResponseResult> reservationResponseResults;
+    @ApiModelProperty(example = "10")
     private long size;
 
     public ReservationGetApiResponse(@Nonnull List<ReservationResponseResult> reservationResponseResults, long size) {

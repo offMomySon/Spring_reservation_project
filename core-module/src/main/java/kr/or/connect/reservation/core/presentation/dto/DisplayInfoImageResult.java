@@ -1,5 +1,6 @@
 package kr.or.connect.reservation.core.presentation.dto;
 
+import io.swagger.annotations.ApiModelProperty;
 import kr.or.connect.reservation.core.presentation.domain.DisplayInfo;
 import kr.or.connect.reservation.core.presentation.domain.DisplayInfoImage;
 import kr.or.connect.reservation.core.presentation.domain.FileInfo;
@@ -12,14 +13,23 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class DisplayInfoImageResult {
+    @ApiModelProperty(example = "1")
     private long displayInfoImageId;
+    @ApiModelProperty(example = "1")
     private long displayInfoId;
+    @ApiModelProperty(example = "1")
     private long fileId;
+    @ApiModelProperty(example = "1_map_1.png")
     private String fileName;
+    @ApiModelProperty(example = "img_map/1_map_1.png")
     private String saveFileName;
+    @ApiModelProperty(example = "image/png")
     private String contentType;
+    @ApiModelProperty(example = "false")
     private Boolean deleteFlag;
+    @ApiModelProperty(example = "2020-08-11T01:02:45")
     private LocalDateTime createDate;
+    @ApiModelProperty(example = "2020-08-11T01:02:45")
     private LocalDateTime modifyDate;
 
     public DisplayInfoImageResult(long displayInfoImageId, long displayInfoId, long fileId, String fileName,

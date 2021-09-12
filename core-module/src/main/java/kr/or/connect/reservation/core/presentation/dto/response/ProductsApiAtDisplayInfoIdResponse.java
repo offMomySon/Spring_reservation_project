@@ -1,5 +1,6 @@
 package kr.or.connect.reservation.core.presentation.dto.response;
 
+import io.swagger.annotations.ApiModelProperty;
 import kr.or.connect.reservation.core.presentation.dto.*;
 import lombok.AccessLevel;
 import lombok.Data;
@@ -11,6 +12,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class ProductsApiAtDisplayInfoIdResponse {
+    @ApiModelProperty(example = "3.6666666666666665")
     double averageScore;
     DisplayInfoResult displayInfo;
     DisplayInfoImageResult displayInfoImage;

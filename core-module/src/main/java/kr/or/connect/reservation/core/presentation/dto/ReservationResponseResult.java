@@ -1,6 +1,7 @@
 package kr.or.connect.reservation.core.presentation.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModelProperty;
 import kr.or.connect.reservation.core.presentation.domain.ReservationInfo;
 import lombok.AccessLevel;
 import lombok.Data;
@@ -12,20 +13,41 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class ReservationResponseResult {
+    @ApiModelProperty(example = "33")
     private long reservationInfoId;
+
+    @ApiModelProperty(example = "1")
     private long productId;
+
+    @ApiModelProperty(example = "1")
     private long displayInfoId;
+
+    @ApiModelProperty(example = "testUser")
     private String reservationName;
+
+    @ApiModelProperty(example = "010-1234-1234")
     @JsonProperty("reservationTelephone")
     private String reservationTel;
+
+    @ApiModelProperty(example = "testUser@naver.com")
     private String reservationEmail;
+
+    @ApiModelProperty(example = "2020-09-05T06:51:23")
     private LocalDateTime reservationDate;
+
+    @ApiModelProperty(example = "false")
     @JsonProperty("cancelYn")
     private Boolean cancelFlag;
+
+    @ApiModelProperty(example = "2020-09-05T06:51:23")
     private LocalDateTime createDate;
+
+    @ApiModelProperty(example = "2020-09-05T06:51:23")
     private LocalDateTime modifyDate;
-    @JsonProperty("displayInfo")
+
     private DisplayInfoResult displayInfoResult;
+
+    @ApiModelProperty(example = "15000")
     private Long totalPrice;
 
     public ReservationResponseResult(long reservationInfoId, long productId, long displayInfoId, String reservationName,
